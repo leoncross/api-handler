@@ -22,13 +22,7 @@
           }
         };
         Url.get.param1
-        console.log(Url.get.param1['location'])
-        console.log(param1['location'])
-        console.log('hello')
-        Url.get.location
-        console.log(Url.get.location['location'])
-        console.log(location['location'])
-        console.log('hello')
+        console.log(Url.get.param1)
       });
 
     </script>
