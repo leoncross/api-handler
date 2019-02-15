@@ -16,7 +16,6 @@ $( document ).ready(function() {
   Url.get.location
   location = Url.get.location
 
-  var self = this
   fetch('http://api.openweathermap.org/data/2.5/forecast?q=london,uk&APPID=58c78eb23a6c145f7916168937c977c6')
   .then(data => data.json())
   .then(data => {
@@ -31,7 +30,7 @@ $( document ).ready(function() {
 
   function returnResults (data, self) {
     console.log('complete')
-    self.result = data
+    var result = data
   }
 
 });
