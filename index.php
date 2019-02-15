@@ -8,7 +8,6 @@
   <body>
 
     <script>
-      $( document ).ready(function() {
         Url = {
           get get(){
             var vars= {};
@@ -21,11 +20,10 @@
             return vars;
           }
         };
-        Url.get
-        console.log(Url.get)
+        Url.get.location
+        console.log(1 + location)
+        console.log(2 + location['location'])
         console.log('hello')
-      });
-
     </script>
 
 
