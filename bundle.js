@@ -11,7 +11,7 @@ function getQueryVariable(variable) {
       return pair[1];
     }
   }
-  console.log(location)
+  console.log(location['location'])
 }
 
 },{}]},{},[1]);
