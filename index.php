@@ -8,12 +8,24 @@
   <body>
 
     <script>
-    $( document ).ready(function() {
-      console.log('hello')
-      var a = new RegExp(id+"=([^&#=]*)");
-      console.log(a)
-      return decodeURIComponent(a.exec(window.location.search)[1]);
-    });
+      $( document ).ready(function() {
+        Url = {
+          get get(){
+            var vars= {};
+            if(window.location.search.length!==0)
+              window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value){
+                key=decodeURIComponent(key);
+                if(typeof vars[key]==="undefined") {vars[key]= decodeURIComponent(value);}
+                else {vars[key]= [].concat(vars[key], decodeURIComponent(value));}
+              });
+            return vars;
+          }
+        };
+        Url.get.param1
+        console.log(Url.get.param1)
+        console.log('hello')
+      });
+
     </script>
 
 
