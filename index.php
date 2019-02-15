@@ -21,8 +21,8 @@
             return vars;
           }
         };
-        Url.get.param1
-        console.log(param1)
+        Url.get
+        console.log(Url.get)
         console.log('hello')
       });
 
