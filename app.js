@@ -2,12 +2,12 @@ const fetch = require('node-fetch');
 
 var setLocation = getQueryVariable("location");
 function getQueryVariable(variable) {
-  var query = window.location.search.substring(1);
+  var location = window.location.search.substring(1);
 }
 
 
 var self = this
-fetch('https://api.openweathermap.org/data/2.5/forecast?q=london,uk&APPID=58c78eb23a6c145f7916168937c977c6')
+fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + location + ',uk&APPID=' + process.env.API_KEY)
   .then(data => data.json())
   .then(data => {
     let promise = new Promise(function(resolve, reject) {
