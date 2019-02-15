@@ -1,16 +1,14 @@
-$( document ).ready(function() {
-  Url = {
-    get get(){
-      var vars= {};
-      if(window.location.search.length!==0)
-        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value){
-          key=decodeURIComponent(key);
-          if(typeof vars[key]==="undefined") {vars[key]= decodeURIComponent(value);}
-          else {vars[key]= [].concat(vars[key], decodeURIComponent(value));}
-        });
-      return vars;
+
+var location = getQueryVariable("location");
+
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if (pair[0] == variable) {
+      return pair[1];
     }
-  };
-  Url.get.location
-  console.log(Url.get.location)
-});
+  }
+  console.log(location)
+}
