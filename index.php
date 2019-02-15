@@ -8,6 +8,7 @@
   <body>
 
     <script>
+      $( document ).ready(function() {
         Url = {
           get get(){
             var vars= {};
@@ -20,10 +21,16 @@
             return vars;
           }
         };
-        Url.get.location
-        console.log(1 + location)
-        console.log(2 + location['location'])
+        Url.get.param1
+        console.log(Url.get.param1['location'])
+        console.log(param1['location'])
         console.log('hello')
+        Url.get.location
+        console.log(Url.get.location['location'])
+        console.log(location['location'])
+        console.log('hello')
+      });
+
     </script>
 
 
