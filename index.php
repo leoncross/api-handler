@@ -22,7 +22,7 @@
           }
         };
         Url.get.param1
-        console.log(Url.get.param1)
+        console.log(param1)
         console.log('hello')
       });
 
