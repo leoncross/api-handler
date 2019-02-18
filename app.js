@@ -1,5 +1,7 @@
-const fetch = require('node-fetch');
 require('dotenv').config()
+const fetch = require('node-fetch');
+
+console.log(process.env.API_KEY)
 
 var setLocation = getQueryVariable("location");
 function getQueryVariable(variable) {
@@ -25,3 +27,6 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + location + ',uk&AP
     console.log(data)
     self.result = data
   }
+
+  console.log(location
+  )
