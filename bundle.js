@@ -2,6 +2,9 @@
 (function (process){
 require('dotenv').config()
 const fetch = require('node-fetch');
+
+console.log(process.env)
+
 console.log('api key is:')
 console.log(process.env.API_KEY)
 
@@ -14,7 +17,7 @@ function getQueryVariable(variable) {
 
 
 var self = this
-fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + location + ',uk&APPID=' + process.env.API_KEY)
+fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + location + ',uk&APPID=' + process.env.WEATHER_KEY)
   .then(data => data.json())
   .then(data => {
     let promise = new Promise(function(resolve, reject) {
