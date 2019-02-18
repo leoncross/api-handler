@@ -5,6 +5,8 @@
   "main": "app.js",
   "dependencies": {
     "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
     "node-fetch": "^2.3.0"
   },
   "devDependencies": {},
