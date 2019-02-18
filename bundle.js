@@ -13,7 +13,6 @@ function getQueryVariable(variable) {
   console.log(location)
 }
 
-
 var self = this
 fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + location + ',uk&APPID=' + process.env.WEATHER_KEY)
   .then(data => data.json())
