@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+require('dotenv').config()
 
 var setLocation = getQueryVariable("location");
 function getQueryVariable(variable) {
