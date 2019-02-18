@@ -2,12 +2,14 @@
 (function (process){
 require('dotenv').config()
 const fetch = require('node-fetch');
-
+console.log('api key is:')
 console.log(process.env.API_KEY)
 
 var setLocation = getQueryVariable("location");
 function getQueryVariable(variable) {
   var location = window.location.search.substring(1);
+  console.log('location is:')
+  console.log(location)
 }
 
 
@@ -27,11 +29,7 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + location + ',uk&AP
   function returnResults (data, self) {
     console.log('complete')
     console.log(data)
-    self.result = data
   }
-
-  console.log(location
-  )
 
 }).call(this,require('_process'))
 },{"_process":6,"dotenv":2,"node-fetch":3}],2:[function(require,module,exports){
