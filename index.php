@@ -7,7 +7,7 @@
   </head>
   <body>
 
-    <script src="bundle.js"></script>
+    <script src="app.js"></script>
 
 
     nothing to see here!

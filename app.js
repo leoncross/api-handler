@@ -1,10 +1,10 @@
 require('dotenv').config()
 const fetch = require('node-fetch');
 
-console.log(process.env)
+
 
 console.log('api key is:')
-console.log(process.env.API_KEY)
+console.log(process.env.WEATHER_KEY)
 
 var setLocation = getQueryVariable("location");
 function getQueryVariable(variable) {
