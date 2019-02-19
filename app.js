@@ -18,7 +18,7 @@ app.get('/weather', function(req, res){
   console.log(location)
   var WeatherAPI = require ('./public/js/weatherAPI.js')
   api = new WeatherAPI()
-  api.getWeatherData("asdf", location)
+  api.getWeatherData(process.env.WEATHER_KEY, location)
   setTimeout(function(){ res.send(api.weatherData) }, 2000);
 });
 

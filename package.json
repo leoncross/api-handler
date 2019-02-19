@@ -1,7 +1,7 @@
 {
-  "name": "will-it-rain-api",
+  "name": "api-handler",
   "version": "1.0.0",
-  "description": "",
+  "description": "handles my api requests",
   "main": "app.js",
   "dependencies": {
     "dotenv": "^6.2.0",
@@ -13,13 +13,13 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leoncross/will-it-rain-api.git"
   },
-  "author": "",
+  "author": "leon cross",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/leoncross/will-it-rain-api/issues"
