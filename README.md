@@ -1,1 +1,1 @@
-# will-it-rain-api
+# API handler
