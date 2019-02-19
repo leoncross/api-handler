@@ -23,6 +23,4 @@ WeatherAPI.prototype.getWeatherData = function (key, location) {
   }
 }
 
-
-
 module.exports = WeatherAPI

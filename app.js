@@ -1,9 +1,19 @@
 require('dotenv').config()
-var path = require('path');
+const path = require('path');
+const cors = require('cors');
 const fetch = require('node-fetch');
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000;
+
+app.use(cors({
+  'allowedHeaders': ['sessionId', 'Content-Type'],
+  'exposedHeaders': ['sessionId'],
+  'origin': '*',
+  'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  'preflightContinue': false
+}));
+
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '/public')));
