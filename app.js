@@ -9,13 +9,13 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/weather', function(req, res){
-  res.send(req.query);
-  // var WeatherAPI = require ('./public/js/weatherAPI.js')
-  // api = new WeatherAPI()
-  // api.getWeatherData(process.env.WEATHER_KEY, id)
-  // res.render('index', {
-  // });
+  location = req.query.location
+  console.log(location)
+  var WeatherAPI = require ('./public/js/weatherAPI.js')
+  api = new WeatherAPI()
+  api.getWeatherData(process.env.WEATHER_KEY, location)
+  setTimeout(function(){ res.send(api.weatherData) }, 3000);
 });
 
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`app listening on port ${port}!`))
